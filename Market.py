@@ -13,7 +13,7 @@ def patane_reyonu():
     print("Burada patates, soğan vb. ürünlerin satışı yapılır.")
     print("Basit reyon işlemleri gösterilir.")
     
-    def salamanra_ayarla():
+def saklama_ayarla():
     print("\n--- Salamanra Ayarları ---")
     istenen_sicaklik = input("İstenen sıcaklık (°C): ")
     istenen_nem = input("İstenen nem (%): ")
@@ -24,3 +24,17 @@ def stok_raporu():
     print("\n--- Stok / Satış Raporu ---")
     print("Bu örnekte veri yapısı kullanılmadığı için gerçek stok bilgisi tutulmuyor.")
     print("Sadece rapor fonksiyonunun örnek çalışması.")
+
+def tedarik():
+    print("\n--- Tedarik (Stok Arttırma) ---")
+    sube = input("Tedarik yapılacak şube adı: ")
+    urun = input("Ürün adı: ")
+    miktar = input("Eklenecek miktar: ")
+    print(f"{sube} şubesine {miktar} adet/kilo {urun} eklendi (örnek).")
+
+def siparis():
+    print("\n--- Sipariş (Stok Azaltma) ---")
+    sube = input("Sipariş yapılan şube adı: ")
+    urun = input("Satılacak ürün adı: ")
+    miktar = input("Satılacak miktar: ")
+    print(f"{sube} şubesinde {urun} stokundan {miktar} düşüldü (örnek).")
