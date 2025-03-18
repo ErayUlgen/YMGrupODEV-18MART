@@ -38,3 +38,33 @@ def siparis():
     urun = input("Satılacak ürün adı: ")
     miktar = input("Satılacak miktar: ")
     print(f"{sube} şubesinde {urun} stokundan {miktar} düşüldü (örnek).")
+
+
+def personel_modulu():
+    print("\n--- Personel Modülü ---")
+    print("1) Personel Ekle")
+    print("2) Personel İzin Güncelle")
+    print("3) Personel Maaş Görüntüle")
+    secim = input("Seçiminiz: ")
+    
+    if secim == "1":
+        isim = input("Yeni personel ismi: ")
+        pozisyon = input("Pozisyonu: ")
+        print(f"{isim} adlı personel {pozisyon} olarak eklendi (örnek).")
+    elif secim == "2":
+        pid = input("İzin güncellenecek personel ID: ")
+        yeni_izin = input("Yeni izin gün sayısı: ")
+        print(f"Personel {pid} için izin gün sayısı {yeni_izin} olarak güncellendi (örnek).")
+    elif secim == "3":
+        pid = input("Maaşı görüntülenecek personel ID: ")
+        print(f"Personel {pid} maaşı: 8000 TL (örnek).")
+    else:
+        print("Geçersiz seçim!")
+
+def stok_tasima():
+    print("\n--- Şubeler Arası Stok Taşıma ---")
+    kaynak = input("Kaynak şube: ")
+    hedef = input("Hedef şube: ")
+    urun = input("Taşınacak ürün: ")
+    miktar = input("Miktar: ")
+    print(f"{kaynak} şubesinden {hedef} şubesine {miktar} adet/kilo {urun} taşındı (örnek).")
