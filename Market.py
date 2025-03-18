@@ -38,3 +38,53 @@ def siparis():
     urun = input("Satılacak ürün adı: ")
     miktar = input("Satılacak miktar: ")
     print(f"{sube} şubesinde {urun} stokundan {miktar} düşüldü (örnek).")
+def kar_zarar_analizi():
+    print("\n--- Kar/Zarar Analizi ---")
+    urun = input("Analizi yapılacak ürün adı: ")
+    maliyet = float(input("Ürünün maliyeti: "))
+    satis_fiyati = float(input("Ürünün satış fiyatı: "))
+    adet = float(input("Satılan adet/ miktar: "))
+    kar = (satis_fiyati - maliyet) * adet
+    print(f"{urun} için toplam kâr: {kar} TL")
+
+def main():
+    while True:
+        print("\n=== BASİT MARKET YÖNETİM SİSTEMİ ===")
+        print("1) Akıllı Kasa")
+        print("2) Patane Reyonu")
+        print("3) Salamanra Ayarları")
+        print("4) Stok / Satış Raporu")
+        print("5) Tedarik (Stok Arttırma)")
+        print("6) Sipariş (Stok Azaltma)")
+        print("7) Personel Modülü")
+        print("8) Şubeler Arası Stok Taşıma")
+        print("9) Kar/Zarar Analizi")
+        print("0) Çıkış")
+        
+        secim = input("Seçiminiz: ")
+        if secim == "1":
+            akilli_kasa()
+        elif secim == "2":
+            patane_reyonu()
+        elif secim == "3":
+            salamanra_ayarla()
+        elif secim == "4":
+            stok_raporu()
+        elif secim == "5":
+            tedarik()
+        elif secim == "6":
+            siparis()
+        elif secim == "7":
+            personel_modulu()
+        elif secim == "8":
+            stok_tasima()
+        elif secim == "9":
+            kar_zarar_analizi()
+        elif secim == "0":
+            print("Programdan çıkılıyor...")
+            break
+        else:
+            print("Geçersiz seçim! Tekrar deneyin.")
+
+if _name_ == "_main_":
+    main()
